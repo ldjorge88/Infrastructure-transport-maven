@@ -34,7 +34,7 @@
 			<groupId>co.edu.uco.transport.domain</groupId>
 			<artifactId>transport-domain</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
-			<scope>runtime</scope>
+			<scope>compile</scope>
 		</dependency>
 	</dependencies>
 
