@@ -5,14 +5,9 @@ on:
       - master
   pull_request:
     types: [opened, synchronize, reopened]
-  workflow_run:
-    workflows: [ "transport-domain" ]
-    branches: [ master ]
-    types:
-      - completed
 jobs:
   build:
-    name: Build
+    name: transport-infrastructure
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -22,6 +17,8 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 17
+      - name: transport-domain
+        uses: actions/cache@v1
       - name: Cache SonarCloud packages
         uses: actions/cache@v1
         with:
