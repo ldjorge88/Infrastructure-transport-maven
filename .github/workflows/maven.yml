@@ -7,13 +7,6 @@ on:
     types: [opened, synchronize, reopened]
 jobs:
   build:
-    - name: transport-domain
-      runs-on: ubuntu-latest
-      uses: actions/setup-java@v3
-      with:
-        java-version: '17'
-        distribution: 'temurin'
-        cache: maven
     name: transport-infrastructure
     - needs: transport-domain
     runs-on: ubuntu-latest
